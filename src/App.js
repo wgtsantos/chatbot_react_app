@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import './App.css';
+import './App.scss';
 import autoResponses from './autoRespostas'; // Importa o arquivo com as respostas automáticas
 import Jchat from './janelaChat'; // Importa o componente da janela do chat
 

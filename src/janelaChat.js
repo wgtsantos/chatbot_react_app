@@ -15,10 +15,8 @@ function Jchat({ messages, userInput, setUserInput, sendMessage, botTyping, isCh
     <div>
       <div className="chat-window p-3">
         {messages.map((message, index) => (
-          <div key={index} className={`card mb-2 message ${message.sender === 'bot' ? 'bg-light' : 'bg-primary text-white'}`}>
-            <div className="card-body">
+          <div key={index} className={`card mb-2 message ${message.sender === 'bot' ? 'bot' : 'user'}`}>
               {message.text}
-            </div>
           </div>
         ))}
 

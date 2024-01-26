@@ -1,0 +1,91 @@
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-header h1 {
+  font-size: calc(20px + 2vmin);
+  font-weight: bolder;
+  color: rgb(0, 0, 0);
+  font-family: consolas;
+}
+
+.chat-window {
+  width: 300px;
+  height: 500px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  overflow-y: auto; /* Permite a rolagem vertical */
+  background: white;
+  color: black;
+  font-size: calc(4px + 1vmin);
+}
+
+/* Estilos adicionais para os balões de diálogo */
+.message {
+  border-radius: 15px;
+  padding: 10px;
+  margin-bottom: 10px;
+  max-width: 70%;
+  position: relative;
+  word-wrap: break-word; /* Garante que o texto não ultrapasse o balão */
+}
+
+.message.user {
+  background-color: #0008ff;
+  color: white;
+  align-self: flex-end;
+  margin-left: 28%;
+  /* Cria a 'cauda' do balão para mensagens do usuário */
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -16px; /* Ajuste conforme necessário */
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent #0008ff ;
+    transform: translateY(-50%) translateX(9%);
+  }
+}
+
+.message.bot {
+  background-color: #e5e5ea;
+  border-color: #e5e5ea;
+  color: black;
+  align-self: flex-start;
+  margin-right: 30%;
+  /* Cria a 'cauda' do balão para mensagens do bot */
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -16px; /* Ajuste conforme necessário */
+    border-width: 10px;
+    border-style: solid;
+    border-color:transparent #e5e5ea transparent transparent ;
+    transform: translateY(-50%) translateX(-9%);
+  }
+}
+
+.typing-indicator {
+  color: gray; /* Exemplo de cor */
+  font-style: italic;
+  padding: 5px;
+  /* Adicione mais estilos conforme necessário */
+}
+
+input {
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ccc;
+}
+
+.btn-custom {
+  margin: 10px;
+  height: 40px; /* Exemplo de altura */
+}
