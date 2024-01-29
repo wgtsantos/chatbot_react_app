@@ -6,11 +6,18 @@
   justify-content: center;
 }
 
-.App-header h1 {
+.App-header h1, h2 {
   font-size: calc(20px + 2vmin);
   font-weight: bolder;
   color: rgb(0, 0, 0);
   font-family: consolas;
+}
+
+.chatbot-icon {
+  height: 50px; /* Ajuste o tamanho conforme necessário */
+  width: auto;
+  vertical-align: middle; /* Para alinhar verticalmente com o texto */
+  margin-right: 10px; /* Espaço entre a imagem e o texto */
 }
 
 .chat-window {

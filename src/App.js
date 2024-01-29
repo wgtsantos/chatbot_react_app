@@ -111,7 +111,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Chatbot</h1>
+        <h1>
+          <img src="./robo.png" alt="Ícone do ChatBot" className="chatbot-icon" />
+          ChatBot
+        </h1>
+        <h1>Suporte TI</h1>
         <Jchat
           messages={messages}
           userInput={userInput}
